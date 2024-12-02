@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en-gb'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>24-hour clock</title>
+    <link rel='stylesheet' href='style.css' />
+    <link rel='icon' href='images/24h-logo.png' />
+  </head>
+
+  <body>
+
+  <header>
+      <a href='index.html'> <img src='images/lone.png' alt='The Atomic Baker'/> </a>
+      <h1> 24-hour clock (for reference) </h1>
+      <span class='dropdown'>
+        <button onclick='menuClick()' id='settings' >&#x2263</button>
+        <ul class='drop-menu'>
+          <li class='drop-itemSml' style='display: none;'> <a href='#'>link1</a> </li>
+          <li class='drop-itemSml' style='display: none;'> <a href='#'>link2</a> </li>
+          <li class='drop-itemSml' style='display: none;'> <a href='#'>link3</a> </li>
+          <li class='drop-itemBig' style='display: none;'> <a href='#'>link3</a> </li>
+        </ul>
+      </span>
+    </header>
+
+    <div class='main-container'>
+      <div class='clock-div'>
+        <canvas  id='24hclock-canvas' width='1000' height='1000'>
+          Sorry, your browser does not support canvas.
+        </canvas>
+      </div>
+    </div>
+    <a class='main-link' href='index.html'>Raddec Clock (go back)</a>
+
+    <script src='js/24hour.js'></script>
+
+    <hr />
+
+    <div class='text-block'>
+      <p>
+        This design works in a similar way to the radian-decimal, with noon and midnight on the upper and lower extremes of the circumference. However, this one shows the time in our current 24-hour system.
+      </p>
+    </div>
+
+  </body>
+</html>

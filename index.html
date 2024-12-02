@@ -1,0 +1,70 @@
+<!-- Style inspired and based on Jan-ne's site at https://jan-ne.github.io/ with its repository at https://github.com/jan-Ne/jan-ne.github.io -->
+
+<!DOCTYPE html>
+<html lang='en-gb'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Raddec Clock</title>
+    <link rel='stylesheet' href='style.css' />
+    <link rel='icon' href='images/raddec-logo.png' />
+  </head>
+
+  <body>
+
+    <header>
+      <a href='index.html'> <img src='images/lone.png' alt='The Atomic Baker'/> </a>
+      <h1> Radian-Decimal (Raddec) Clock </h1>
+      <span class='dropdown'>
+        <button onclick='menuClick()' id='settings' >&#x2263</button>
+        <ul class='drop-menu'>
+          <li class='drop-itemSml' style='display: none;'> <a href='#'>link1</a> </li>
+          <li class='drop-itemSml' style='display: none;'> <a href='#'>link2</a> </li>
+          <li class='drop-itemSml' style='display: none;'> <a href='#'>link3</a> </li>
+          <li class='drop-itemBig' style='display: none;'> <a href='#'>link3</a> </li>
+        </ul>
+      </span>
+    </header>
+
+    <div class='main-container'>
+      <div class='clock-div'>
+        <canvas  id='raddec-canvas' width='1000' height='1000'>
+          Sorry, your browser does not support canvas.
+        </canvas>
+      </div>
+    </div>
+    <a class='main-link' href='24hclock.html'>24-hour clock</a>
+
+    <script src='js/raddec2.js'></script>
+
+    <hr />
+
+    <div class='text-block'>
+      <h1> About the clock </h1>
+      <p>
+         The radian-decimal clock is a design made to fit a decimal system of units like the SI (the International or metric System). It functions as a form of <i>'decimal time'</i>, with a 20-unit subdivision of the day. The reason 20 units was chosen rather than 10 (which would be the most obvious path given we are working in base 10) is to resemble the way angles are measured in SI with the radian.
+      </p>
+
+      <p>
+        The radian (rad) is a unit for angles, where 1 radian is defined as the angle at which the radius of the circumference is equal to the arc length. There are 2&pi; radians in a full circumference.
+      </p>
+
+      <p>
+        Choosing 20 units makes for an intuitive way to position the sun in the sky. One can take the time marked by the clock, divide it by 10 (or, equivalently, move the decimal point one place ot the left) and multiply it by &pi; to get the angle between the horizon line and the position of the sun in the sky. This is achieved as well thanks to the clock starting at 0 being sunrise.
+      </p>
+
+      <p>
+        For example, take noon, at this moment the sun reaches the highest point in the sky and forms a 90&deg; with the horizon line. At this time of the day the clock marks 5, if we want to express this angle between the sun and the horizon in radians we first divide 5 by 10, .5, and multiply by &pi;, the result is .5&pi; (or &pi;/2) which is equivalent to 90&deg;
+      </p>
+
+      <p>
+        Choosing 20 time units also makes for an intuitive way to tell daytime from nighttime. If we try to reduce the design to a 10-unit time format that completes 2 revolutions in 1 day like we do with the 24-hour system, reducing it to a 12-hour and distinguishing between day and night with the preffixes 'am' and 'pm', 1pm in this case would mean 1 time unit past sunset which is just 11 with 1am being one time unit past sunrise. Day and night are separated by 10 time units making it easy to know the relationship between the 2 and the position of the sun in the sky. Another example would be noon, or midday, being at 5 and midnight at 15.
+      </p>
+    </div>
+
+
+    <script src='/js/menu.js'></script>
+
+  </body>
+</html>

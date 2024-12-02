@@ -1,0 +1,129 @@
+/* Style inspired and based on Jan-ne's site at https://jan-ne.github.io/ with its repository at https://github.com/jan-Ne/jan-ne.github.io */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* root */
+:root{
+  --txt-clr     : #000000;
+  --bg-clr      : #ffffff;
+  --dropdown-clr: #263248;
+  --header-clr  : #ff9800;
+  --content-clr : #ffffff;
+  --link-clr    : #ff9800;
+  /*left over colour from palette: #7e8aa2*/
+}
+
+/* general */
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+html {font-size: 1.5vmin;}
+
+/* page-body */
+body {
+  margin: 0;
+  color: var(--txt-clr);
+  background-color: var(--bg-clr);
+}
+
+/* light/dark mode */
+body.light-mode{
+  --txt-clr     : #000000;
+  --bg-clr      : #ffffff;
+  --dropdown-clr: #263248;
+  --header-clr  : #ff9800;
+  --content-clr : #ffffff;
+  --link-clr    : #ff9800;
+}
+
+body.dark-mode{
+  --txt-clr     : #fff;
+  --bg-clr      : #102;
+  --dropdown-clr: #003;
+  --header-clr  : #303;
+  --content-clr : #303;
+  --link-clr    : #fc0;
+}
+
+/* dark mode as default */
+@media (prefers-color-scheme: dark) {
+  body{
+    --txt-clr     : #fff;
+    --bg-clr      : #222;
+    --dropdown-clr: #003;
+    --header-clr  : #011;
+    --content-clr : #303;
+    --link-clr    : #fc0;
+  }
+  .dark-invert {
+    filter: invert(.9);
+  }
+}
+
+/* main */
+header{
+  background-color: var(--header-clr);
+  color: var(--txt-clr);
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  padding: 0 1vmin;
+  height: 8vmin;
+
+}
+
+header a {
+  text-decoration: none;
+  color: var(--txt-clr);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+div.clock-div {
+  width:  80vmin;
+  height: 80vmin;
+  display: flex;
+  horizontal-align: middle;
+}
+
+div.main-container {
+  width:  100%;
+  height: 80vmin;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.main-link, a.main-link:visited{
+  text-decoration: none;
+  background-color: DarkSlateBlue;
+  padding: 0 1vmin 0 1vmin;
+  border: solid .25vmin;
+  color: #ff0;
+  font-size: 1.5rem;
+}
+
+a.main-link:hover {
+  font-weight: bold;
+}
+
+div.text-block {
+  width: 95vw;
+  margin: auto;
+}
+
+hr{
+  border: solid .125vmin #db3;
+}
+
+p{
+  text-align: left;
+  font-size: 1.25rem;
+}
